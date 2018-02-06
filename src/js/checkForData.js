@@ -1,4 +1,8 @@
-function checkForData () {
+import {goTo} from './goTo';
+import {revealModal} from './revealModal';
+import {fetchData} from './fetchData';
+
+const checkForData = () => {
 
   //detele all content-grids
   let contentGrids = document.querySelectorAll('.content-grid');
@@ -13,7 +17,7 @@ function checkForData () {
   }
 
   //empty the gridArray
-  gridArray = [];
+  let gridArray = [];
 
   //if there's no data, reveal intro page, then return
   if (window.localStorage.getItem('Data') == null || window.localStorage.getItem('Data') == '{}') {
@@ -25,7 +29,7 @@ function checkForData () {
   document.querySelector('.intro-screen').style.display = 'none';
 
   //populate sourceObject with data
-  sourceObject = JSON.parse(window.localStorage.getItem('Data'));
+  let sourceObject = JSON.parse(window.localStorage.getItem('Data'));
 
   //get keys, then write divs
   Object.keys(sourceObject).forEach(key => {
@@ -41,7 +45,7 @@ function checkForData () {
     viewButton.classList.add(`nav-${key}`);
 
     viewButton.addEventListener('click', function() {
-      goTo(key);
+      goTo(key, gridArray);
     });
 
     nav.appendChild(viewButton);
@@ -120,3 +124,5 @@ function checkForData () {
   });
   document.querySelector('nav').appendChild(newViewButton);
 }
+
+export {checkForData};

@@ -1,4 +1,7 @@
-function createCustomView () {
+import {checkForData} from './checkForData';
+import {goTo} from './goTo';
+
+function createCustomView (sourceObject) {
 
   //if view does not have a name, give an alert
   if(document.querySelector('.viewName').value == '') {
@@ -38,3 +41,5 @@ function createCustomView () {
   checkForData()
   goTo(sourceName);
 }
+
+export {createCustomView};

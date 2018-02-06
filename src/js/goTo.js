@@ -1,4 +1,4 @@
-function goTo(key) {
+function goTo(key, gridArray) {
 
   const currentContentDiv = document.querySelector('.active').classList;
   const targetContentDiv = document.querySelector(`.${key}`).classList;
@@ -46,3 +46,5 @@ function goTo(key) {
   document.querySelector(`.nav-${key}`).classList.add('active-nav');
 
 }
+
+export {goTo};

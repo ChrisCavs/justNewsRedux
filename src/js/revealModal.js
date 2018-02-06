@@ -1,3 +1,5 @@
+import {createCustomView} from './createCustomView';
+
 function revealModal (name) {
 
   if (name == '') {
@@ -14,6 +16,7 @@ function revealModal (name) {
   //reveal it
   document.querySelector('.modal').style.display = 'block';
 
+  let sourceObject = JSON.parse(window.localStorage.getItem('Data'))
   const dataToAdd = sourceObject[name];
 
   //fill in selected sources based on data
@@ -46,7 +49,9 @@ function revealModal (name) {
   }
 
   //add event listeners on buttons
-  document.querySelector('.add-selections').addEventListener('click', createCustomView);
+  document.querySelector('.add-selections').addEventListener('click', function (sourceObject) {
+    createCustomView(sourceObject);
+    });
   document.querySelector('.cancel').addEventListener('click', function () {
     document.querySelector('.modal').style.display = 'none';
   });
@@ -80,3 +85,5 @@ function revealModal (name) {
     }));
   }
 }
+
+export {revealModal};

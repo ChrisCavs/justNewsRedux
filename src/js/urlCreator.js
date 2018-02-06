@@ -4,3 +4,5 @@ function urlCreator (type, source) {
   const part3 = '&apiKey=f1e5704e50ab42bf909e1a1598498713'; //api key
   return (part1 + part2 + part3);
 }
+
+export {urlCreator};
