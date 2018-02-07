@@ -68,7 +68,7 @@ const checkForData = () => {
       document.querySelector(`.${key}`).appendChild(contentDiv);
 
       //fetch data for each source
-      fetchData(source);
+      fetchData(source, 14);
     });
 
     //add edit and remove buttons
