@@ -1,6 +1,6 @@
-import {goTo} from './goTo';
-import {revealModal} from './revealModal';
-import {fetchData} from './fetchData';
+import goTo from './goTo';
+import revealModal from './revealModal';
+import fetchData from './fetchData';
 
 const checkForData = () => {
 
@@ -57,6 +57,7 @@ const checkForData = () => {
     document.querySelector('body').appendChild(newGrid);
 
     //create content divs for each source
+    console.log(sourceObject[key]);
     sourceObject[key].forEach(source => {
       const contentDiv = document.createElement('div');
       contentDiv.classList.add('content', source);

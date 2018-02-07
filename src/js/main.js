@@ -17,7 +17,7 @@ function setup() {
   if (fixed == 'no') {
 
     Array.from(document.querySelectorAll('.accordian')).forEach(item => item.addEventListener('click', function () {
-      
+
       //*****fix this so that it just toggles a class.  make sure that all the other panels are closed as well
       const panel = this.nextElementSibling;
 

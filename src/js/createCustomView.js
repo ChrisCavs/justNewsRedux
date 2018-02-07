@@ -1,7 +1,7 @@
 import {checkForData} from './checkForData';
 import {goTo} from './goTo';
 
-function createCustomView (sourceObject) {
+function createCustomView () {
 
   //if view does not have a name, give an alert
   if(document.querySelector('.viewName').value == '') {
@@ -24,15 +24,20 @@ function createCustomView (sourceObject) {
   //assign sources data to a sourceArray with a sourceName
   let sourceName = document.querySelector('.viewName').value;
   let sourceArray = [];
+  console.log(`sourceName: ${sourceName}`);
+
 
   Array.from(document.querySelectorAll('.selected')).forEach(item => {
     sourceArray.push(item.classList[1]);
   });
 
+  console.log(`sourceArray: ${sourceArray}`);
+
   //hide the modal
   document.querySelector('.modal').style.display = 'none';
 
   //add sourceObject to localStorage
+  sourceObject = JSON.parse(window.localStorage.getItem('Data'));
   sourceObject[sourceName] = sourceArray;
   let DATA = JSON.stringify(sourceObject);
   window.localStorage.setItem('Data', DATA);
