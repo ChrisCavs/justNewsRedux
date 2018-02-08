@@ -31,7 +31,7 @@ header {
   font-weight: bold;
   text-align: center;
 
-  padding: 30px 20px 50px 20px;
+  padding: 30px 20px 40px 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -62,22 +62,27 @@ nav button {
 /*=====INTRO SCREEN=====*/
 .intro-screen {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  top:110px;
-  left:0;
-  right:0;
+  top: 110px;
+  left: 0;
+  right: 0;
 
   max-width: 1080px;
 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   transition-duration: 0.6s;
 }
 
 .intro-screen p {
+  font-size: 18px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -277,8 +282,15 @@ footer a:hover {
   padding: 0px 20px 20px 20px;
 }
 .modal-selections h1 {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 30px;
+}
+.modal-selections input {
+  margin-top: 10px;
+
+  font-size: 14px;
+
+  border: 1px solid grey;
 }
 .accordian {
   width: 100%;
@@ -356,8 +368,14 @@ footer a:hover {
       text-decoration: line-through;
     }
 .instructions1 {
-  padding: 14px;
+  font-size: 14px;
+  font-weight: bold;
+
+  padding: 18px;
 }
 .instructions2 {
+  font-size: 14px;
+  font-weight: bold;
+  
   padding:14px 14px 14px 0px;
 }
