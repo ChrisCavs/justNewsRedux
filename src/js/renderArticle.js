@@ -1,14 +1,17 @@
-function renderArticle(article) {
+function renderArticle(article, key) {
 
   //make sure the article has a title and description
-  if (article.description == null || article.title == null) return;
+  if (article.description == null || article.title == null || article.urlToImage == null) return;
 
-  const destinationDiv = document.querySelector(`.content-grid .${article.source.id}`);
+  const destinationDiv = document.querySelector(`.${key}`);
   destinationDiv.innerHTML += `
     <a class='article-grid' href='${article.url}' target='_blank'>
-      <p class='article-title'>${article.title}</p>
-      <p class='article-body'>${article.description}</p>
-      <p class='article-time'>${article.publishedAt.slice(5,10) + ' at ' + article.publishedAt.slice(11,16) + ' - ' + article.source.name}</p>
+      <div class='article-image'><img src=${article.urlToImage}></div>
+      <div class='article-content'>
+        <p class='article-title'>${article.title.length > 90 ? article.title.slice(0,89) + '...' : article.title}</p>
+        <p class='article-body'>${article.description.length > 160 ? article.description.slice(0,159) + '...' : article.description}</p>
+        <p class='article-time'>${article.publishedAt.slice(5,10) + ' at ' + article.publishedAt.slice(11,16) + ' - ' + article.source.name}</p>
+      </div>
     </a>
   `;
 }

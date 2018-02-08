@@ -37,9 +37,6 @@ const checkForData = () => {
   //get keys, then write divs
   Object.keys(sourceObject).forEach(key => {
 
-    //add to gridArray
-    gridArray.push(key);
-
     //add to nav
     const nav = document.querySelector('nav');
     const viewButton = document.createElement('button');
@@ -52,45 +49,24 @@ const checkForData = () => {
     });
 
     nav.appendChild(viewButton);
-    gridArray.push(key);
 
     //generate content-grid
     const newGrid = document.createElement('div');
     newGrid.classList.add('content-grid', key);
     document.querySelector('body').appendChild(newGrid);
 
-    //create content divs for each source
-    console.log(sourceObject[key]);
-    sourceObject[key].forEach(source => {
-      const contentDiv = document.createElement('div');
-      contentDiv.classList.add('content', source);
-      const contentDivH1 = document.createElement('h1');
-      const contentDivH1Text = document.createTextNode(document.querySelector(`.modal-content .${source}`).innerHTML)
-      contentDivH1.appendChild(contentDivH1Text);
-      contentDiv.appendChild(contentDivH1);
-      document.querySelector(`.${key}`).appendChild(contentDiv);
-
-      //fetch data for each source
-      fetchData(source);
-    });
+    //fetch data for each source
+    fetchData(sourceObject[key], key);
 
     //add edit and remove buttons
-    const buttonDiv = document.createElement('div');
-    const editViewButton = document.createElement('button');
-    const editViewText = document.createTextNode('Edit View');
-    const removeViewButton = document.createElement('button');
-    const removeViewText = document.createTextNode('Remove View');
-
-    editViewButton.appendChild(editViewText);
-    editViewButton.classList.add('edit-view');
-    removeViewButton.appendChild(removeViewText);
-    removeViewButton.classList.add('remove-view');
-
-    buttonDiv.classList.add('edit-remove-container');
-    buttonDiv.appendChild(editViewButton);
-    buttonDiv.appendChild(removeViewButton);
-
-    document.querySelector(`.${key}`).appendChild(buttonDiv);
+    const targetGrid = document.querySelector(`.${key}`);
+    console.log(targetGrid.innerHTML);
+    targetGrid.innerHTML += `
+      <div class='edit-remove-container'>
+        <button class='edit-view'>Edit View</button>
+        <button class='remove-view'>Remove View</button>
+      </div>
+    `;
 
     //add eventlistener on edit and remove buttons
     document.querySelector(`.${key} .edit-view`).addEventListener('click', function () {
