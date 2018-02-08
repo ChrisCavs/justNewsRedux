@@ -151,7 +151,7 @@ nav button {
   display: flex;
 
   width: 49%;
-  max-height: 250px;
+  max-height: 200px;
 
   padding: 16px;
   margin-bottom: 20px;
@@ -169,7 +169,7 @@ nav button {
 
 .article-image {
   display: flex;
-  width: 40%;
+  width: 50%;
   height: auto;
 
   margin-right: 16px;
@@ -181,11 +181,11 @@ nav button {
 }
 
 .article-content {
-  width: 60%;
+  width: 50%;
 }
 
 .article-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   margin-bottom: 12px;
 
@@ -193,11 +193,11 @@ nav button {
 }
 .article-body {
   color: #3a3a3a;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
 }
 .article-time {
-  font-size: 14px;
+  font-size: 12px;
   color: #477cb8;
 }
 
@@ -213,15 +213,15 @@ footer {
   width: 100%;
   max-width: 1080px;
 
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 
   margin-left: auto;
   margin-right: auto;
 
   font-size: 12px;
 
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.85);
 
   z-index: 5;
 }
