@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  max-width: 1080px;
+  max-width: 1200px;
 
   font-size: 30px;
   font-weight: bold;
@@ -66,7 +66,7 @@ nav button {
   left: 0;
   right: 0;
 
-  max-width: 1080px;
+  max-width: 1200px;
 
   display: flex;
   justify-content: space-between;
@@ -109,7 +109,7 @@ nav button {
   left: 0;
   right: 0;
 
-  max-width: 1080px;
+  max-width: 1200px;
 
   display: flex;
   justify-content: space-between;
@@ -138,9 +138,9 @@ nav button {
   display: flex;
 
   width: 49%;
-  max-height: 220px;
+  max-height: 250px;
 
-  padding: 16px;
+  padding: 14px;
   margin-bottom: 20px;
 
   box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
@@ -148,7 +148,7 @@ nav button {
   transition-duration: 0.3s;
 }
     .article-grid:hover {
-      opacity: 0.7;
+      opacity: 0.6;
     }
     .article-grid:hover > .article-content > .article-title {
       color: #6b068c;
@@ -156,6 +156,7 @@ nav button {
 
 .article-image {
   display: flex;
+  align-items: center;
   width: 50%;
   height: auto;
 
@@ -168,6 +169,9 @@ nav button {
 }
 
 .article-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 50%;
 }
 
@@ -198,7 +202,7 @@ footer {
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1080px;
+  max-width: 1200px;
 
   padding: 20px;
 
