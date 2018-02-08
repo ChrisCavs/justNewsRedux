@@ -1,6 +1,6 @@
-import goTo from './goTo';
-import revealModal from './revealModal';
-import fetchData from './fetchData';
+import {goTo} from './goTo';
+import {revealModal} from './revealModal';
+import {fetchData} from './fetchData';
 
 const checkForData = () => {
 

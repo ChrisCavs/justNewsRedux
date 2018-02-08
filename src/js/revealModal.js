@@ -19,8 +19,9 @@ function revealModal (name) {
   let sourceObject = JSON.parse(window.localStorage.getItem('Data'));
 
   //fill in selected sources based on data
-  if (sourceObject !== null && !== {}) {
+  if (sourceObject !== null) {
 
+    if (name == '') return;
     const dataToAdd = sourceObject[name];
 
     //first, clear out selected items

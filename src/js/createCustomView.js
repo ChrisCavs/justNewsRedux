@@ -37,7 +37,10 @@ function createCustomView () {
   document.querySelector('.modal').style.display = 'none';
 
   //add sourceObject to localStorage
-  sourceObject = JSON.parse(window.localStorage.getItem('Data'));
+  let sourceObject = JSON.parse(window.localStorage.getItem('Data'));
+  if (sourceObject == null) {
+    sourceObject = {};
+  }
   sourceObject[sourceName] = sourceArray;
   let DATA = JSON.stringify(sourceObject);
   window.localStorage.setItem('Data', DATA);
