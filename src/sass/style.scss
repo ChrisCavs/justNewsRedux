@@ -315,14 +315,17 @@ footer a:hover {
 
 .panel {
   max-height: 0;
-
   overflow: hidden;
 
-  transition: max-height 0.5s ease-out;
+  transition: max-height 0.4s ease;
 }
 	.panel p:hover {
       	background-color: #c0fbbf;
     	}
+  .panel-active {
+    max-height: 600px;
+    overflow: scroll;
+  }
 
 .modal-buttons {
   display: flex;
@@ -376,6 +379,6 @@ footer a:hover {
 .instructions2 {
   font-size: 14px;
   font-weight: bold;
-  
+
   padding:14px 14px 14px 0px;
 }

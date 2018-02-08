@@ -29,16 +29,13 @@ function setup() {
 
     Array.from(document.querySelectorAll('.accordian')).forEach(item => item.addEventListener('click', function () {
 
-      //*****fix this so that it just toggles a class.  make sure that all the other panels are closed as well
-      const panel = this.nextElementSibling;
+      const thisPanel = this.nextElementSibling;
+      const allPanels = Array.from(document.querySelectorAll('.panel'));
 
-      if (panel.style.maxHeight) {
-        panel.style.maxHeight = null;
-        panel.style.overflow = 'hidden';
-      } else {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-        panel.style.overflow = 'scroll';
-      }
+      allPanels.forEach(panel => panel.classList.contains('panel-active') ? panel.classList.remove('panel-active') : null);
+
+      thisPanel.classList.add('panel-active');
+
     }));
     fixed = 'yes';
   }
