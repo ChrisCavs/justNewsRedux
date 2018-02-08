@@ -50,6 +50,10 @@ nav button {
   font-size: 18px;
   margin-right: 5px;
   margin-left: 5px;
+
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 .active-nav {
   color: #ff0d13;
@@ -133,13 +137,13 @@ nav button {
 .edit-view {
 	padding: 8px;
 	margin-bottom: 20px;
-	font-size: 14px;
+	font-size: 12px;
 	background-color: #c0fbbf;
 }
 .remove-view {
 	padding: 8px;
 	margin-bottom: 20px;
-	font-size: 14px;
+	font-size: 12px;
 	background-color: #ffb0ae;
 }
 
