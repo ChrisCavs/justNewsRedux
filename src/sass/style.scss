@@ -127,33 +127,13 @@ nav button {
   transform: translate(200%);
 }
 
-.edit-remove-container {
-	display: flex;
-	justify-content: space-between;
-
-	width: 100%;
-}
-
-.edit-view {
-	padding: 8px;
-	margin-bottom: 20px;
-	font-size: 12px;
-	background-color: #c0fbbf;
-}
-.remove-view {
-	padding: 8px;
-	margin-bottom: 20px;
-	font-size: 12px;
-	background-color: #ffb0ae;
-}
-
 /*=====ARTICLE STYLING=====*/
 
 .article-grid {
   display: flex;
 
   width: 49%;
-  max-height: 200px;
+  max-height: 220px;
 
   padding: 16px;
   margin-bottom: 20px;
@@ -215,15 +195,14 @@ footer {
   width: 100%;
   max-width: 1080px;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 20px;
 
   margin-left: auto;
   margin-right: auto;
 
   font-size: 12px;
 
-  background-color: rgba(255,255,255,0.85);
+  background-color: white;
 
   z-index: 5;
 }
@@ -232,6 +211,17 @@ footer a {
 }
 footer a:hover {
   color: #1026ef;
+}
+
+.edit-view {
+	font-size: 12px;
+	background-color: #c0fbbf;
+
+  margin-right: 20px;
+}
+.remove-view {
+	font-size: 12px;
+	background-color: #ffb0ae;
 }
 
 /*=====MODAL=====*/
