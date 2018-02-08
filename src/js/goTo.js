@@ -15,7 +15,7 @@ function goTo(key) {
 
     //otherwise move them right
     targetContentDiv.toggle('move-left');
-    currentContentDiv.toggle('.move-right')
+    currentContentDiv.toggle('move-right')
   }
   
   currentContentDiv.remove('active');
