@@ -19,9 +19,8 @@ function revealModal (name) {
   let sourceObject = JSON.parse(window.localStorage.getItem('Data'));
 
   //fill in selected sources based on data
-  if (sourceObject !== null) {
+  if (sourceObject !== null && name !== '') {
 
-    if (name == '') return;
     const dataToAdd = sourceObject[name];
 
     //first, clear out selected items
@@ -49,7 +48,7 @@ function revealModal (name) {
     //fill in the view name on modal
     document.querySelector('.viewName').value = name;
   }
-console.log(sourceObject);
+
   //add event listeners on buttons
   document.querySelector('.add-selections').addEventListener('click', createCustomView);
   document.querySelector('.cancel').addEventListener('click', function () {
@@ -70,6 +69,7 @@ console.log(sourceObject);
         }
       });
     }
+    console.log(skip);
     if (skip) return;
 
     //create a matching element in the "selections" div

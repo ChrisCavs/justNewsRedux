@@ -1,5 +1,6 @@
-function goTo(key, gridArray) {
+function goTo(key) {
 
+  const gridArray = Array.from(document.querySelectorAll('nav button')).splice(-1,1);
   const currentContentDiv = document.querySelector('.active').classList;
   const targetContentDiv = document.querySelector(`.${key}`).classList;
 

@@ -8,11 +8,6 @@ function setup() {
   //check localStorage for data.  if there is data, generate the custom views
   checkForData();
 
-  //if there is no data: show intro page, add event listener on create-custom
-  document.querySelector('.create-custom').addEventListener('click', function () {
-    revealModal('');
-  });
-
   //add event listeners on menu within modal
   if (fixed == 'no') {
 

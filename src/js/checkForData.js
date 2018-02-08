@@ -22,6 +22,9 @@ const checkForData = () => {
   //if there's no data, reveal intro page, then return
   if (window.localStorage.getItem('Data') == null || window.localStorage.getItem('Data') == '{}') {
     document.querySelector('.intro-screen').style.display = 'flex';
+    document.querySelector('.create-custom').addEventListener('click', function () {
+      revealModal('');
+    });
     return;
   };
 
@@ -97,7 +100,7 @@ const checkForData = () => {
       delete sourceObject[key];
       let DATA = JSON.stringify(sourceObject);
       window.localStorage.setItem('Data', DATA);
-      setup();
+      checkForData();
     })
   });
 
