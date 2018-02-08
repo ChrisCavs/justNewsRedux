@@ -1,6 +1,9 @@
 function goTo(key) {
 
-  const gridArray = Array.from(document.querySelectorAll('nav button')).splice(-1,1);
+  let gridArray = [];
+  Array.from(document.querySelectorAll('.content-grid')).forEach(grid => {
+    gridArray.push(grid.classList[1]);
+  });
   const currentContentDiv = document.querySelector('.active').classList;
   const targetContentDiv = document.querySelector(`.${key}`).classList;
 
@@ -17,7 +20,7 @@ function goTo(key) {
     targetContentDiv.toggle('move-left');
     currentContentDiv.toggle('move-right')
   }
-  
+
   currentContentDiv.remove('active');
   targetContentDiv.add('active');
 
