@@ -68,7 +68,7 @@ const checkForData = () => {
       </div>`;
 
     //add eventlistener on edit and remove buttons
-    targetGrid.querySelector(`.edit-view`).addEventListener('click', () => {
+    targetGrid.querySelector('.edit-view').addEventListener('click', () => {
       revealModal(key);
     });
     targetGrid.querySelector(`.remove-view`).addEventListener('click', () => {
