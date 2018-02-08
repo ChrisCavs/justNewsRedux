@@ -1,6 +1,7 @@
 import {createCustomView} from './createCustomView';
 
 function revealModal (name) {
+  console.log('revealModal fires');
 
   if (name == '') {
 

@@ -60,24 +60,23 @@ const checkForData = () => {
 
     //add edit and remove buttons
     const targetGrid = document.querySelector(`.${key}`);
-    console.log(targetGrid.innerHTML);
+    console.log(targetGrid);
     targetGrid.innerHTML += `
       <div class='edit-remove-container'>
         <button class='edit-view'>Edit View</button>
         <button class='remove-view'>Remove View</button>
-      </div>
-    `;
+      </div>`;
 
     //add eventlistener on edit and remove buttons
-    document.querySelector(`.${key} .edit-view`).addEventListener('click', function () {
+    targetGrid.querySelector(`.edit-view`).addEventListener('click', () => {
       revealModal(key);
     });
-    document.querySelector(`.${key} .remove-view`).addEventListener('click', function () {
+    targetGrid.querySelector(`.remove-view`).addEventListener('click', () => {
       delete sourceObject[key];
       let DATA = JSON.stringify(sourceObject);
       window.localStorage.setItem('Data', DATA);
       checkForData();
-    })
+    });
   });
 
   //hide all but the first view

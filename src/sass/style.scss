@@ -16,10 +16,6 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
 
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-
   background-color: white;
 }
 
@@ -29,14 +25,13 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  width: 90%;
+  max-width: 1080px;
 
   font-size: 30px;
   font-weight: bold;
   text-align: center;
 
-  padding-top: 30px;
-  padding-bottom: 50px;
+  padding: 30px 20px 50px 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -48,12 +43,13 @@ header span {
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav button {
   font-size: 18px;
-  margin-left: 5px;
   margin-right: 5px;
+  margin-left: 5px;
 }
 .active-nav {
   color: #ff0d13;
@@ -112,7 +108,9 @@ nav button {
 
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
 
   transition-duration: 0.6s;
 }
@@ -133,15 +131,15 @@ nav button {
 }
 
 .edit-view {
-	padding: 10px;
+	padding: 8px;
 	margin-bottom: 20px;
-	font-size: 16px;
+	font-size: 14px;
 	background-color: #c0fbbf;
 }
 .remove-view {
-	padding: 10px;
+	padding: 8px;
 	margin-bottom: 20px;
-	font-size: 16px;
+	font-size: 14px;
 	background-color: #ffb0ae;
 }
 
@@ -368,26 +366,4 @@ footer a:hover {
 }
 .instructions2 {
   padding:14px 14px 14px 0px;
-}
-
-@media screen and (max-width: 769px) {
-  .content-grid {
-    left: 5%;
-    margin-right: 5%;
-  }
-
-  .modal-container {
-    display: block;
-    width: 95%;
-    max-height: 95%;
-    margin: 20px auto;
-  }
-
-  footer {
-    width: 90%;
-  }
-
-  .modal-content, .modal-selections {
-    width: auto;
-  }
 }
