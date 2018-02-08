@@ -9,39 +9,17 @@ function goTo(key) {
   if (gridArray.indexOf(currentContentDiv[1]) < gridArray.indexOf(targetContentDiv[1])) {
 
     //move the two pieces left
-    if (currentContentDiv.contains('move-right')) {
-      currentContentDiv.toggle('move-right');
-      currentContentDiv.toggle('active');
-    } else {
-      currentContentDiv.toggle('move-left');
-      currentContentDiv.toggle('active');
-    }
-    if (targetContentDiv.contains('move-right')) {
-      targetContentDiv.toggle('move-right');
-      targetContentDiv.toggle('active');
-    } else {
-      targetContentDiv.toggle('move-left');
-      targetContentDiv.toggle('active');
-    }
-
+    targetContentDiv.toggle('move-right');
+    currentContentDiv.toggle('move-left');
   } else {
 
     //otherwise move them right
-    if (currentContentDiv.contains('move-left')) {
-      currentContentDiv.toggle('move-left');
-      currentContentDiv.toggle('active');
-    } else {
-      currentContentDiv.toggle('move-right');
-      currentContentDiv.toggle('active');
-    }
-    if (targetContentDiv.contains('move-left')) {
-      targetContentDiv.toggle('move-left');
-      targetContentDiv.toggle('active');
-    } else {
-      targetContentDiv.toggle('move-right');
-      targetContentDiv.toggle('active');
-    }
+    targetContentDiv.toggle('move-left');
+    currentContentDiv.toggle('.move-right')
   }
+  
+  currentContentDiv.remove('active');
+  targetContentDiv.add('active');
 
   document.querySelector('.active-nav').classList.remove('active-nav');
   document.querySelector(`.nav-${key}`).classList.add('active-nav');
