@@ -1,3 +1,4 @@
+import {arrayFrom} from './polyfills';
 import {checkForData} from './checkForData';
 import {revealModal} from './revealModal';
 
