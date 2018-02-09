@@ -103,16 +103,12 @@ nav button {
 
 /*=====CONTENT and CONTAINERS=====*/
 
-.content {
-  display: flex;
-  justify-content: center;
-}
-
 .content-grid {
   position: absolute;
-  top: 110px;
+  top: 110;
   left: 0;
   right: 0;
+  bottom: 100;
 
   max-width: 1200px;
 

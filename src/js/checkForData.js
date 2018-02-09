@@ -53,7 +53,7 @@ const checkForData = () => {
     //generate content-grid
     const newGrid = document.createElement('div');
     newGrid.classList.add('content-grid', key);
-    document.querySelector('.content').appendChild(newGrid);
+    document.querySelector('body').appendChild(newGrid);
 
     //fetch data for each source
     fetchData(sourceObject[key], key);
