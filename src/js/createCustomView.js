@@ -10,7 +10,7 @@ function createCustomView () {
   }
 
   //if view name contains a space, give an alert
-  if(Array.from(document.querySelector('.viewName').value.split('')).includes(' ')) {
+  if(document.querySelector('.viewName').value.split('').includes(' ')) {
     alert('View names cannot contain spaces');
     return;
   }
