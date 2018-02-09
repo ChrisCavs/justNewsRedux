@@ -74,7 +74,7 @@ const checkForData = () => {
     }
   });
 
-  //add + button to nav
+  // + button to nav
   const newViewButton = document.createElement('button');
   const newViewButtonText = document.createTextNode('+');
   newViewButton.appendChild(newViewButtonText);

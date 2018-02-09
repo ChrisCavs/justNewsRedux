@@ -140,7 +140,7 @@ nav button {
   width: 49%;
   max-height: 250px;
 
-  padding: 16px;
+  padding: 12px;
   margin-bottom: 20px;
 
   box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
@@ -225,11 +225,18 @@ footer a:hover {
 	font-size: 12px;
 	background-color: #c0fbbf;
 
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .remove-view {
 	font-size: 12px;
 	background-color: #ffb0ae;
+
+  margin-right: 30px;
+}
+
+.favorites {
+  font-size: 12px;
+  background-color: #ffffd5;
 }
 
 /*=====MODAL=====*/
