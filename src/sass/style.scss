@@ -9,55 +9,13 @@
 
 // COMPONENTS
 
-// SECTIONS
-html {
-  overflow-x: hidden;
-}
-body {
-  font-family: 'Roboto', sans-serif;
+@import "./components/header";
 
-  background-color: white;
-}
+// SECTIONS
+
 
 /*=====HEADER=====*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  max-width: 1200px;
-
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-
-  padding: 30px 20px 40px 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-header span {
-    color: #ff0d13;
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav button {
-  font-size: 18px;
-  margin-right: 5px;
-  margin-left: 5px;
-
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.active-nav {
-  color: #ff0d13;
-}
 
 /*=====INTRO SCREEN=====*/
 .intro-screen {
