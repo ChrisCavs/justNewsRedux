@@ -1,4 +1,3 @@
-import {checkForFavorites} from './favorites';
 import {checkForData} from './checkForData';
 import {revealModal} from './revealModal';
 
