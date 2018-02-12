@@ -78,13 +78,13 @@
 
   cursor: pointer;
 
-  background-color: #eee;
+  background-color: $light-grey;
 
   transition: 0.3s;
 }
 
     .accordian:hover {
-      background-color: #ccc;
+      background-color: $darker-grey;
     }
 
 .panel {
@@ -100,7 +100,7 @@
     }
 
     .panel p:hover {
-      background-color: #c0fbbf;
+      background-color: $green;
     }
 
 .modal-buttons {
@@ -118,11 +118,11 @@
 }
 
 .add-selections {
-  background-color: #c0fbbf;
+  background-color: $green;
 }
 
 .cancel {
-  background-color: #ffb0ae;
+  background-color: $light-red;
 }
 
 .selections {
@@ -142,27 +142,27 @@
 
   cursor: pointer;
 
-  color: #1026ef;
+  color: $solid-blue;
 
   transition-duration: 0.3s;
 }
 
     .selections .selected:hover {
-      color: #ff0d13;
-      background-color: #eee;
+      color: $red;
+      background-color: $light-grey;
       text-decoration: line-through;
     }
 
 .instructions1 {
+  padding: 18px;
+
   font-size: 14px;
   font-weight: bold;
-
-  padding: 18px;
 }
 
 .instructions2 {
-  font-size: 14px;
-  font-weight: bold;
-
   padding:14px 14px 14px 0px;
+
+  font-size: 14px;
+  font-weight: bold;  
 }
