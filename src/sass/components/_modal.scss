@@ -11,6 +11,7 @@
 
   z-index: 10;
 }
+
 .source {
   width: 100%;
 
@@ -34,13 +35,14 @@
 
   background-color: white;
 }
+
 .modal-content {
   display: flex;
   flex-direction: column;
 
   width: 40%;
-
 }
+
 .modal-selections {
   display: flex;
   flex-direction: column;
@@ -49,17 +51,20 @@
 
   padding: 0px 20px 20px 20px;
 }
+
 .modal-selections h1 {
   margin-top: 30px;
   margin-bottom: 30px;
 }
+
 .modal-selections input {
   margin-top: 10px;
 
-  font-size: 14px;
-
   border: 1px solid grey;
+
+  font-size: 14px;
 }
+
 .accordian {
   width: 100%;
 
@@ -77,6 +82,7 @@
 
   transition: 0.3s;
 }
+
     .accordian:hover {
       background-color: #ccc;
     }
@@ -87,13 +93,15 @@
 
   transition: max-height 0.4s ease;
 }
-	.panel p:hover {
-      	background-color: #c0fbbf;
-    	}
-  .panel-active {
-    max-height: 600px;
-    overflow: scroll;
-  }
+
+    .panel-active {
+      max-height: 600px;
+      overflow: scroll;
+    }
+
+    .panel p:hover {
+      background-color: #c0fbbf;
+    }
 
 .modal-buttons {
   display: flex;
@@ -101,24 +109,29 @@
 
   margin-top: 40px;
 }
+
 .modal-buttons button {
   padding: 10px;
   margin-right: 16px;
 
   font-size: 16px;
 }
+
 .add-selections {
   background-color: #c0fbbf;
 }
+
 .cancel {
   background-color: #ffb0ae;
 }
+
 .selections {
   display: flex;
   flex-wrap: wrap;
 
   justify-content: space-between;
 }
+
 .selections .selected {
   width: 50%;
 
@@ -133,17 +146,20 @@
 
   transition-duration: 0.3s;
 }
+
     .selections .selected:hover {
       color: #ff0d13;
       background-color: #eee;
       text-decoration: line-through;
     }
+
 .instructions1 {
   font-size: 14px;
   font-weight: bold;
 
   padding: 18px;
 }
+
 .instructions2 {
   font-size: 14px;
   font-weight: bold;
