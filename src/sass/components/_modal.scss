@@ -1,0 +1,152 @@
+.modal {
+  position: fixed;
+  top:0;
+  left:0;
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0,0,0,0.5);
+
+  z-index: 10;
+}
+.source {
+  width: 100%;
+
+  font-size: 16px;
+  padding: 14px 18px;
+
+  cursor: pointer;
+
+  transition-duration: 0.3s;
+}
+
+.modal-container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 70%;
+  height: auto;
+  max-height: 90%;
+
+  margin: 50px auto;
+
+  background-color: white;
+}
+.modal-content {
+  display: flex;
+  flex-direction: column;
+
+  width: 40%;
+
+}
+.modal-selections {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+
+  padding: 0px 20px 20px 20px;
+}
+.modal-selections h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.modal-selections input {
+  margin-top: 10px;
+
+  font-size: 14px;
+
+  border: 1px solid grey;
+}
+.accordian {
+  width: 100%;
+
+  padding: 18px 0;
+
+  font-size: 18px;
+  text-align: center;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  background-color: #eee;
+
+  transition: 0.3s;
+}
+    .accordian:hover {
+      background-color: #ccc;
+    }
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.4s ease;
+}
+	.panel p:hover {
+      	background-color: #c0fbbf;
+    	}
+  .panel-active {
+    max-height: 600px;
+    overflow: scroll;
+  }
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+
+  margin-top: 40px;
+}
+.modal-buttons button {
+  padding: 10px;
+  margin-right: 16px;
+
+  font-size: 16px;
+}
+.add-selections {
+  background-color: #c0fbbf;
+}
+.cancel {
+  background-color: #ffb0ae;
+}
+.selections {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+}
+.selections .selected {
+  width: 50%;
+
+  padding: 16px 0;
+
+  font-size: 16px;
+  text-align: center;
+
+  cursor: pointer;
+
+  color: #1026ef;
+
+  transition-duration: 0.3s;
+}
+    .selections .selected:hover {
+      color: #ff0d13;
+      background-color: #eee;
+      text-decoration: line-through;
+    }
+.instructions1 {
+  font-size: 14px;
+  font-weight: bold;
+
+  padding: 18px;
+}
+.instructions2 {
+  font-size: 14px;
+  font-weight: bold;
+
+  padding:14px 14px 14px 0px;
+}

@@ -1,0 +1,41 @@
+.intro-screen {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  transition-duration: 0.6s;
+}
+
+.intro-screen p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+}
+
+.intro-screen button {
+  padding: 12px;
+  margin-top: 80px;
+
+  font-size: 20px;
+  text-align: center;
+
+  transition-duration: 0.3s;
+}
+
+    .intro-screen button:hover {
+     background-color: $yellow;
+    }
