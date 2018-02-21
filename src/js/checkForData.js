@@ -20,7 +20,7 @@ const checkForData = () => {
   let gridArray = [];
 
   //if there's no data, reveal intro page, then return
-  if (window.localStorage.getItem('Data') == null || window.localStorage.getItem('Data') == '{}') {
+  if (window.localStorage.getItem('Data') === null || window.localStorage.getItem('Data') === '{}') {
     document.querySelector('.intro-screen').style.display = 'flex';
     document.querySelector('.create-custom').addEventListener('click', function () {
       revealModal('');
